@@ -1,0 +1,544 @@
+/* styles.css */
+body, html {
+  height: 100%; /* Full height */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Alegreya Sans SC', sans-serif; 
+  padding-top: 50px; /* Adjust this value based on the navbar's height */
+   display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+nav#navbar ul li a {
+  font-size: 1.25rem; /* Enlarge the font size as desired */
+  text-align: center; /* Center the text */
+  padding: 0px 5px; /* Add padding to increase the clickable area */
+}
+
+/* This will center the navbar items themselves if they aren't already */
+
+
+
+nav#navbar ul li a:hover,
+nav#navbar ul li a.active {
+  border-bottom: 2px solid #FCED65; /* Adjust the color as needed */
+}
+.navbar-brand img {
+  height: auto; /* Set the height you want for your logo */
+  width: auto; /* This will maintain the aspect ratio of the logo */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* This adds a shadow around the logo */
+}
+
+
+/* Navbar brand logo styles */
+.navbar-brand img {
+  height: 100px; /* Set the desired height */
+  width: auto; /* Maintain aspect ratio */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional shadow */
+}
+
+/* Navbar link styles */
+nav#navbar ul.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+nav#navbar ul.navbar-nav li a {
+  font-size: 1.25rem; /* Set the desired font size */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+/* Center the nav items inside the collapse container */
+nav#navbar .navbar-collapse {
+  justify-content: center;
+  margin-right: 100px;
+}
+
+/* Ensure the nav is full width */
+nav#navbar {
+  width: 100%;
+  height: auto;
+}
+
+/* Optional: Remove if the logo should only be visible on mobile */
+.logo {
+  display: none;
+}
+
+/* Center the nav items for desktop screens */
+@media (min-width: 992px) { /* Adjust the min-width as per Bootstrap's breakpoint or your design */
+  nav#navbar .navbar-nav {
+    justify-content: center;
+  }
+  
+  /* Optional: Show the logo in the navbar for desktop screens */
+  .logo {
+    display: block;
+  }
+}
+
+section 
+  {
+    box-sizing: border-box;
+  border: 2px solid white; /* Adjust the border size and style as needed */
+  padding: 20px; /* Add some padding inside the section, if desired */
+  margin: 20px ; /* Add some margin around each section to prevent borders from touching */
+ 
+  border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+
+
+header {
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.discover-button {
+  border: 1px solid #B4FE7A;
+  background: transparent;
+  color: #B4FE7A;
+  font-family: inherit;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 120px;
+  width: 10%; 
+}
+
+#energy .mission-statement {
+  background: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+  border-radius: 10px; /* rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  padding: 20px; /* space inside the box */
+  margin: 20px; /* space outside the box */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.75); /* subtle white border */
+  color: #333; /* text color */
+  text-align: center; /* center the text */
+  max-width: 6000px; /* max width of the box */
+  margin-left: auto; /* center the box horizontally */
+  margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #energy .mission-statement {
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.9em; /* smaller font size on smaller screens */
+  }
+}
+
+#discover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this to suit the desired height */
+  flex-direction: column;
+}
+
+#discover .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items:flex-start;
+  width: 100%; /* Ensures content-container takes up full width of #discover */
+}
+
+#discover .image-container {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  flex-basis: calc(50% - 20px); /* Subtract gap from the width */
+  max-width: calc(50% - 20px); /* Subtract gap from the width */
+margin: 0 auto;
+margin-top: 20px;
+
+}
+
+#discover .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#discover .text-box {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  flex-basis: calc(50% - 20px); /* Subtract gap from the width */
+  max-width: 6000px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #discover .content-container {
+    flex-direction: column;
+  }
+
+  #discover .image-container,
+  #discover .text-box {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0; /* Reset any margins that might be present */
+  }
+
+  #discover .image-container img {
+    margin-bottom: 20px; /* Space between image and text box */
+  }
+}
+
+
+
+
+
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.features1 {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  background: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: inherit;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2  {
+  margin: 10px 0;
+  align-items: center;
+}
+
+
+.card button {
+  border: 1px solid #375E40;
+  background: transparent;
+  color: #375E40;
+  font-family: inherit;
+  padding: 16px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 120px;
+  width: 100%; /* Full width buttons on mobile */
+}
+
+.black-and-white .main-content  {
+  filter: grayscale(80%);
+}
+
+.black-and-white .footer {
+  filter: grayscale(80%); /* Add any additional styles specific to black-and-white mode */
+}
+
+
+#energy {
+  background-color: #e7e25f; /* Example solid color */
+  height: auto; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  position: relative
+
+}
+
+#discover {
+  background-color: #a3aa52; /* Example solid color */
+  height: auto; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  position: relative
+
+}
+
+
+#support {
+  background-color: #fced65; /* Example solid color */
+  height: auto; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  position: relative
+
+}
+
+#aboutus {
+  background-color: #e7e25f; /* Example solid color */
+  height: auto; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  position: relative
+
+}
+
+#aboutus .content-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures content-container takes up full width of #discover */
+}
+
+#aboutus .image-container {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  flex-basis: calc(50% - 20px); /* Subtract gap from the width */
+  max-width: calc(50% - 20px); /* Subtract gap from the width */
+margin: 0 auto;
+margin-top: 20px;
+
+}
+#aboutus .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#aboutus .text-box {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 15px;
+  flex-basis: calc(50% - 20px); /* Subtract gap from the width */
+  max-width: 6000px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.main-content {
+  flex: 1; /* This allows the container to grow and fill the available space */
+  /* Keep your section styles here */
+}
+
+#shadow-host-companion {
+  display: none !important; /* or adjust as needed */
+}
+
+
+footer {
+  background-color: #375e40; /* Background color for the footer */
+  clear: both;
+  height: auto;
+  color: #fff; /* Text color */
+  padding: 0 0; /* Padding on the top and bottom */
+ margin-top: auto;
+}
+
+
+
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+   margin-top: auto; /* This pushes the footer to the bottom */
+  padding: 0 20px; /* Padding on the sides */
+}
+.footer-left {
+  justify-content: flex-start; /* Aligns content to the left */
+}
+
+
+.footer-left,
+.footer-right {
+  flex: 1 1 auto; /* Allows each section to grow and shrink as needed */
+  margin: 10px 0; /* Adds vertical spacing */
+}
+
+.footer-left p {
+  margin: 0; /* Removes default margin */
+  
+}
+
+
+
+.footer-right {
+  text-align: right; /* Aligns social icons to the right */
+  order: 2;
+  padding-right: 20px;
+}
+
+.footer-right a {
+  margin-left: 10px; /* Space between icons */
+  font-size: 24px; /* Icon size */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.footer-right img {
+  width: 24px; /* Adjust based on your preference */
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-left,  .footer-right {
+      text-align: center; /* Center-align all items */
+      width: 100%; /* Full width for all items */
+      order: unset; /* Resets the order to natural flow */
+  }
+
+  .footer-left p, .footer-center a, .footer-right a {
+      margin: 0 auto; /* Center content */
+      font-size: 16px; /* Adjust font size for mobile view */
+  }
+
+  .footer-right {
+      margin-top: 10px; /* Adds space between center and right sections */
+  }
+}
+
+
+.container {
+  max-width: 1200px; /* Limit the width of the footer content */
+  margin: 0 auto; /* Center the footer content */
+}
+
+.container p {
+  margin: 0; /* Remove default margin for the paragraph */
+}
+
+@media (max-width: 992px) { /* This breakpoint should match your navbar's collapsing point */
+  #toggleBW {
+    position: absolute;
+    top: 10px; /* Adjust as necessary */
+    left: 70px; /* Adjust this value so that the button is next to the logo */
+    z-index: 1050; /* Ensures the button is above other navbar items */
+  }
+
+  .navbar-brand {
+    position: relative; /* Ensures the logo is the positioning context for the B&W button */
+  }
+
+  /* Additional styles if necessary to ensure the button does not interfere with the collapsible menu */
+}
+
+
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  /* For tablets and above */
+  .features, .cards-container {
+    justify-content: space-around;
+  }
+
+  .card {
+    width: calc(50% - 40px); /* two cards per row, accounting for margin */
+  }
+
+  .card .buttons {
+    flex-direction: row; /* Side by side buttons on tablets and above */
+  }
+}
+
+@media (min-width: 900px) {
+  /* For desktops and above */
+  .card {
+    width: calc(33.3333% - 40px); /* three cards per row */
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  /* For tablets and above */
+  .features1, .cards-container {
+    justify-content: space-around;
+  }
+
+  
+}
+
+@media (min-width: 900px) {
+  /* For desktops and above */
+  .card1 {
+    width: calc(33.3333% - 40px); /* three cards per row */
+  }
+}
